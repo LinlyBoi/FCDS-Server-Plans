@@ -1,10 +1,26 @@
 # Extranet Solutions
 >## 1. Internal VPN with proper authentication methods in place
->Most maintenance tasks require access to the main server (leader node of cluster) such as creating kubernetes deployments, configuring existing services. Certain maintenance tasks are usually urgent and require hotfixes on the spot. Remote access can pose a security risk if it is done via SSH through the internet with password authentication and it would be bad practice to unneccesarily expose the leader node for something primarily dealing with the private network of the establishment which is the reason why we chose to have an internal vpn for said tasks with a PKI (Public Key Infrastructure) in place to ensure only authorised individuals have access to the faculty network and securing all machines with proper firewall configuration (independent from network firewall rules) and ssh access only via ssh/gpg keys for authorised individuals.
+>Most maintenance tasks require access to the main server (leader node of cluster) such as creating kubernetes deployments, configuring existing services.
+>
+>- Certain maintenance tasks are usually urgent and require hotfixes on the spot. 
+> 
+>- Remote access can pose a security risk if it is done via SSH through the internet with password authentication and it would be bad practice to unneccesarily expose the leader node for something primarily dealing with the private network of the establishment which is the reason why we chose to have an internal vpn for said tasks with a PKI (Public Key Infrastructure) in place to ensure only authorised individuals have access to the faculty network and securing all machines with proper firewall configuration (independent from network firewall rules) and ssh access only via ssh/gpg keys for authorised individuals.
 
 
 
 >## 2. Range of *Random high* ports forwarded for various services (VPN,ssh)
+>- Most automated attacks target common ports for certain services for example:
+>  1. port 22 for ssh (bruteforce logins)
+>  2. 25 for smtp (spam emails)
+>  
+>- To avoid most automated attacks we select random high ports for the server's private services (excludes the faculty website)
+>Example services:
+>1. Gitlab instance
+>2. PostgreSQL database
+>3. OpenVPN server
+>
+   
+ 
 
 
 >## 3. SSL certificates for the VPN server and clients 
