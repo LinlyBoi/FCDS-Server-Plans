@@ -1,5 +1,5 @@
 # Extranet Solutions
->## 1. Internal VPN with proper authentication methods in place
+## 1. Internal VPN with proper authentication methods in place
 >Most maintenance tasks require access to the main server (leader node of cluster) such as creating kubernetes deployments, configuring existing services.
 >
 >- Certain maintenance tasks are usually urgent and require hotfixes on the spot. 
@@ -8,22 +8,24 @@
 
 
 
->## 2. Range of *Random high* ports forwarded for various services (VPN,ssh)
->- Most automated attacks target common ports for certain services for example:
->  1. port 22 for ssh (bruteforce logins)
->  2. 25 for smtp (spam emails)
->  
->- To avoid most automated attacks we select random high ports for the server's private services (excludes the faculty website)
->Example services:
->1. Gitlab instance
->2. PostgreSQL database
->3. OpenVPN server
->
+## 2. Range of *Random high* ports forwarded for various services (VPN,ssh)
+- Most automated attacks target common ports for certain services for example:
+  1. port 22 for ssh (bruteforce logins)
+  2. 25 for smtp (spam emails)
+  
+  
+- To avoid most automated attacks we select random high ports for the server's private services (excludes the faculty website)
+ 
+- Example services
+	1. Gitlab instance
+	2. PostgreSQL database
+	3. OpenVPN server
+
    
  
 
 
->## 3. SSL certificates for the VPN server and clients 
+## 3. SSL certificates for the VPN server and clients 
 
 # Website solutions
 >## 1.  Direct link with static IP OR Dynamic DNS to handle the machine IP address potentially changing (requires the port forwarding mentioned above still)
