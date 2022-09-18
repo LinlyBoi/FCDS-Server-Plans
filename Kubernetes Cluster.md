@@ -15,17 +15,20 @@
 > 4. Internet access optional (preferred to not be visible on network)
 
 ## Docker Images
->1. (for now) Ebn El Haitham 
->2. Git instance (for private images?)
+- [ ] Hardware Database (PostgresSQL) see [[Much Professional Database desc | Database description]]
+- [ ] Facullty website
 
 ## Steps
->1. Install Ubuntu on each device (20.04 or 22.04)
->2. Install MicroK8s and Docker on each device (prompted in installer)
->3. ensure SSH is enabled (Root login disabled)
->4. Connect all "workers" to leader node `microk8s add-node` 
->5. Deploy images (still need to be built)
->6. Deploy load balancer service (YAML premade, just slight modification needed)
-
+> - [x] Install Ubuntu on each device (20.04 or 22.04)
+> - [x] Install MicroK8s and Docker on each device (prompted in installer)
+> - [x] ensure SSH is enabled (Root login disabled)
+> - [ ] Connect all "workers" to leader node `microk8s add-node` 
+> - [ ] Deploy images (still need to be built)
+> - [ ] Deploy load balancer service (YAML premade, just slight modification needed)
+## Content management on Leader node
+Choices: 
+1. Nginx Proxy Manager
+2. Kemp LoadMaster
 ## References
 ### MicroK8s
 >https://microk8s.io/docs/clustering
