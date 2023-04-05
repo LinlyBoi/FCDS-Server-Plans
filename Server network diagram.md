@@ -1,7 +1,7 @@
 ## Diagram
 ![[Group-1.png]]
 - Red colored elements indicate parts controlled directly by the University network engineers
-- Orange elements are within our control and scope to configure 
+- Orange and Green elements are within our control and scope to configure 
 
 # Router
 - To have public static IP for Leader node
